@@ -25,7 +25,7 @@ function tarefasJS(cb) {
                 comments: false,
                 presets: ['@babel/env']
             }))
-            .pipe(concat('libs.js'))
+            .pipe(concat('scripts.js'))
             .pipe(uglify())
             .pipe(rename({ suffix: '.min' }))
             .pipe(gulp.dest('./dist/js'))
@@ -33,23 +33,6 @@ function tarefasJS(cb) {
         return cb()
 }
 
-//gulp nao reconhece esta função devido node nao converte-la de COMMOMJS para ES6.
-// function tarefasIMG(){                
-    
-//    return src('./src/image/*')
-//      .pipe(image({
-//            pngquant: true,
-//            optipng: false,
-//            zopflipng: true,
-//            jpegRecompress: false,
-//            mozjpeg: true,
-//            gifsicle: true,
-//            svgo: true,
-//            concurrent: 10,
-//           quiet: true
-//       }))
-//        .pipe(dest('./dist/images'))
-//    }
 
 function tarefasHTML(cb) {
 
@@ -62,7 +45,6 @@ function tarefasHTML(cb) {
 }
 
 
-//função para atualizar a pasta dist de forma automatica e sincronizada
 gulp.task('serve', function(){
         browserSync.init({
             server: {
@@ -73,7 +55,14 @@ gulp.task('serve', function(){
         gulp.watch('./src/**/*').on('change', reload)
 })
 
-const process = series( tarefasHTML, tarefaCSS, tarefasJS )
+function end(cb) {
+    
+        console.log("Tarefa Concluida")
+
+        return cb()
+}
+
+const process = series( tarefasHTML, tarefaCSS, tarefasJS, end )
 
 exports.styles = tarefaCSS
 exports.scripts = tarefasJS
