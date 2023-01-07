@@ -1,0 +1,53 @@
+header {
+    width: 100%;
+    height: 15rem;
+    display: flex;
+
+
+    .logo {
+        width: 20%;
+        background-color: rgb(255, 208, 0);
+        float: left;
+        display: flex;
+        margin-left: 10rem;
+        
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .navbar {
+        width: 80%;  
+        background-color: $bg-color;    
+        float: right;
+        
+        
+        ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            gap: 5rem;
+            list-style: none;
+            padding-right: 10rem;
+
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                
+                a {
+                    font-family: $font-fml;
+                    font-size: $font-litle;
+                    text-decoration: none;
+                    
+                }
+            }
+            }
+
+
+    }
+
+}

@@ -1,24 +1,12 @@
-import express from 'express';
-import { engine } from 'express-handlebars';
+const express = require('express');
+
 
 const app = express();
 
-
-app.engine('handlebars', engine({defaultLayout: 'main'}))
-app.set('view engine', 'handlebars') 
-app.set('views', './src/views'); //endereço da pasta views
-
-
-
-
-//rotas
-
-app.get('/cad', (req, res) => {
-    res.render('form')
-})
-
+app.use('/', require('./routes/pegar'));
+app.use('/post', require('./routes/pegar'));// tudo que vier apos a url predefinida aqui, coloca-se na rota.
 
 
 app.listen(8081, () => {
-     console.log( 'Server is running!')
-});
+    console.log('Server is running in ' + "http://localhost:8081")
+})
