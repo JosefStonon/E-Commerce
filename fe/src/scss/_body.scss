@@ -1,0 +1,32 @@
+
+.main-1 {
+    width: 100%;
+    display: flex;
+
+.banner-one {
+    max-width: 60%;
+    img {
+        width: 100%;
+        height: 70rem;
+        float: left;
+        margin-top: 5rem;
+    }
+}
+
+.sec-1 {
+    margin-top: 11rem;
+    max-width: 40%;
+    height: 70rem;
+    float: right;
+
+    h1 {
+        
+        top: 5rem;
+        font-family: $font-fml;
+        font-size: $font-big;
+    }
+    
+
+}
+
+}

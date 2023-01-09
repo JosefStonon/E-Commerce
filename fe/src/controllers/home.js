@@ -1,7 +1,10 @@
-const { LAYAOUTS_DIR, MASTER_DIR } = require("./confHendlebars/vars");
+const { LAYAOUTS_DIR, MASTER_DIR, VIEWS_DIR } = require("./confHendlebars/vars");
 
 const handle = (req, res) => {
-    return res.render('home', {layout: MASTER_DIR, title: 'home'});
+    return res.render('main', {
+        layout: MASTER_DIR,
+     
+    });
 };
 
 const index = function(req, res) {

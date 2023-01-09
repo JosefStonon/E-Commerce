@@ -1,6 +1,6 @@
 const PARTIALS_DIR = './src/views/partials';
 const LAYAOUTS_DIR = './src/views/layouts';
-const VIEWS_DIR = './src/views';
+const VIEWS_DIR = './src/views/layouts';
 const MASTER_DIR = 'main.html';
 
 

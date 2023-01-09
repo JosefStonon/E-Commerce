@@ -1,30 +1,31 @@
 header {
     width: 100%;
-    height: 15rem;
+    height: 10rem;
     display: flex;
 
-
     .logo {
-        width: 20%;
+        width: 35rem;
         background-color: rgb(255, 208, 0);
         float: left;
         display: flex;
-        margin-left: 10rem;
+      
         
         img {
             max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
         }
     }
 
     .navbar {
-        width: 80%;  
-        background-color: $bg-color;    
+        width: 100%;  
+        background-color:$bg-second;  
         float: right;
         
         
         ul {
             width: 100%;
-            height: 100%;
+            height: 90%;
             display: flex;
             flex-direction: row;
             justify-content: end;

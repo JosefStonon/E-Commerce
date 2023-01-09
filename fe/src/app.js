@@ -8,6 +8,9 @@ const app = express();
 inithandlebars(app);
 app.use(express.static(path.join(__dirname, 'assets')));
 
+
+
+
 app.use('/', require('./routes/pegar'));
 app.use('/post', require('./routes/pegar'));// tudo que vier apos a url predefinida aqui, coloca-se na rota.
 

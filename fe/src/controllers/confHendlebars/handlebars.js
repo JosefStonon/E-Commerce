@@ -3,7 +3,7 @@ const { PARTIALS_DIR, LAYAOUTS_DIR, VIEWS_DIR } = require('./vars');
 
 exports.init = (app) => {
 app.engine('html',
-     engine({
+     engine({       
     extname: 'html',
     partialsDir: PARTIALS_DIR,
     layoutsDir: LAYAOUTS_DIR,
