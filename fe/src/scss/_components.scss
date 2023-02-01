@@ -1,0 +1,24 @@
+.container {
+    margin: 0;
+    width: 130rem;
+    height: 200px;
+
+}
+
+.btn-act {
+        
+    border: 1px solid #000000;
+    width: 27rem;
+    height: 5rem;
+    margin-top: 3rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    p {
+        color: $bg-card;
+        font-family: $font-fml;
+        font-weight: 600;
+        font-size: $font-small;
+        
+    }
+}

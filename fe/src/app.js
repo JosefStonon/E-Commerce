@@ -1,16 +1,19 @@
 const express = require('express');
 const  { init: inithandlebars } = require('./controllers/confHendlebars/handlebars');
 const path = require('path');
-const Not = require('./controllers/home')
+const { init: shownot} = require('./controllers/loaders/loaderNotif')
+
+
 
 
 const app = express();
 
+
+
 inithandlebars(app);
-Not.start();
+
 
 app.use(express.static(path.join(__dirname, 'assets')));
-
 
 
 

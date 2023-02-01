@@ -29,7 +29,7 @@ class ProductControler {
     async show(req, res) {
     try {
         const {id} = req.params;
-        const product =await ProductModel.findById(id);
+        const product = await ProductModel.findById(id);
             if (!product) {
                 return res.status(404).json({ message: "Product does not exists"});
             }
